@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>zeBLOG | {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="{{ path('blog') }}">zeBLOG!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+​
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog') }}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog') }}">Ajouter un article</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+​
+        <main class="row justify-content-center text-justify p-5">
+​
+            {% block body %}{% endblock %}
+        
+        </main>
+        <footer class="footer">
+            <div class="navbar navbar-expand-lg navbar-light bg-light p-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fuga consequuntur fugiat atque. Ad, similique vitae, sit libero quos deleniti doloribus harum laborum illo veritatis quis amet consequuntur dignissimos fugiat necessitatibus repellat tempore deserunt officia quas rem dolores laudantium! Rerum praesentium repudiandae corrupti cupiditate minus? Repellat odit dolorum saepe, consectetur fugit expedita hic delectus earum molestias, repudiandae voluptates eos necessitatibus corporis doloribus quisquam. Veritatis aliquid numquam ipsum sapiente perspiciatis aperiam! Reiciendis consequuntur hic incidunt sapiente, aliquid placeat quas optio. Iusto, eius! Tenetur ipsa tempore doloremque, perspiciatis neque mollitia debitis ducimus? Labore sit quae illo magni architecto sequi nesciunt deleniti porro?</p>
+            </div>
+        </footer>
+        {% block javascripts %}{% endblock %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
